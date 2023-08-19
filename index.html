@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantity-Count</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <header>
+        <h1 class="text-center text-4xl text-red-500 font-bold mt-20">Quantity Count</h1>
+
+    </header>
+
+    <main>
+        <section>
+            <div class="w-10/12 bg-gray-300 mt-20 mx-auto h-80 flex justify-center items-center flex-col space-y-5">
+
+                <input class="block bg-slate-200 w-4/12" type="text" name="" id="quantity-input" placeholder="Quantity">
+
+                <button id="btn-count" class="bg-green-500 text-white px-20 py-2 text-2xl hover:bg-lime-500 hover:text-black">Count</button>
+            </div>
+        </section>
+    </main>
+    <script>
+         let count = 0;
+        let inputValue = document.getElementById('quantity-input');
+
+        document.getElementById('btn-count').addEventListener('click', function () {
+            count += 1;
+            inputValue.value = count;
+        })
+    </script>
+</body>
+</html>
